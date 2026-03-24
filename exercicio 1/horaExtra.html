@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cálculo de Horas Extras</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-yellow-100 min-h-screen flex items-center justify-center text-gray-800">
+    <div class="w-full max-w-lg bg-white p-8 rounded-2xl shadow-xl space-y-6">
+        
+        <h2 class="text-2xl font-bold text-center text-yellow-600">
+            Cálculo de Horas Extras
+        </h2>
+
+        <!-- Form -->
+        <div class="space-y-4">
+
+            <div>
+                <label class="block mb-1 text-sm text-gray-600">
+                    Salário Bruto
+                </label>
+                <input type="number" id="salarioBruto"
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            </div>
+
+            <div>
+                <label class="block mb-1 text-sm text-gray-600">
+                    Horas Extras (Dias Úteis)
+                </label>
+                <input type="number" id="horasExtrasDiasUteis"
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            </div>
+
+            <div>
+                <label class="block mb-1 text-sm text-gray-600">
+                    Horas Extras (Finais de Semana)
+                </label>
+                <input type="number" id="horasExtrasFinaisSemana"
+                    class="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400">
+            </div>
+        </div>
+
+        <!-- Botão -->
+        <button onclick="calcularHorasExtras()"
+            class="w-full bg-yellow-400 hover:bg-yellow-500 transition p-3 rounded-lg font-semibold text-gray-900">
+            Calcular
+        </button>
+
+        <!-- Resultado -->
+        <div id="resultado"
+            class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg text-center text-lg font-semibold min-h-[50px] flex items-center justify-center">
+            Resultado aparecerá aqui
+        </div>
+        <div class="flex justify-end">
+            <a href="../index.html"
+            class="bg-gray-900 hover:bg-gray-500 transition px-4 py-2 rounded-lg font-semibold text-gray-300 text-sm">
+                Menu
+            </a>
+        </div>
+
+    </div>
+
+    <script src="codigo.js"></script>
+
+</body>
+</html>
