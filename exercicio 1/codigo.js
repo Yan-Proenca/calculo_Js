@@ -9,8 +9,8 @@ function calcularHorasExtras() {
     const horasFinaisSemana = parseFloat(horasExtrasFinaisSemana.value)
     const valorHora = salario / 200
 
-    const valorHorasUteis = horasUteis * valorHora
-    const valorHorasFinaisSemana = horasFinaisSemana * valorHora * 1.5
+    const valorHorasUteis = horasUteis * valorHora * 1.5
+    const valorHorasFinaisSemana = horasFinaisSemana * valorHora * 2
     const totalHorasExtras = valorHorasUteis + valorHorasFinaisSemana
 
     resultado.textContent = `Valor total das horas extras: R$ ${totalHorasExtras.toFixed(2)}`
