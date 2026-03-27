@@ -1,5 +1,5 @@
-const inputSalario = document.getElementById("salarioBruto");
-const resultado = document.getElementById("resultado");
+const inputSalario = document.getElementById('salarioBruto');
+const resultado = document.getElementById('resultado');
 
 function calculoAumentoSalarial() {
     const valorSalario = parseFloat(inputSalario.value); 
@@ -25,3 +25,20 @@ function calculoAumentoSalarial() {
     const novoSalario = valorSalario * (1 + percentual);
     resultado.textContent = `Novo salário: R$ ${novoSalario.toFixed(2)}`;
 }
+
+function atualizarDataHora(){
+    const agora = new Date();
+
+    const data = agora.toLocaleDateString('pt-BR');
+    const hora = agora.toLocaleTimeString('pt-BR');
+
+    const dataHoraEl = document.getElementById('dataHora');
+
+    dataHoraEl.textContent = `Data: ${data} | Hora: ${hora}`;
+}
+
+// Atualiza a cada segundo
+setInterval(atualizarDataHora, 1000);
+
+// executa imediatamente ao carregar
+atualizarDataHora();
