@@ -25,3 +25,20 @@ function calculoCustoMensal() {
         resultado.textContent = `Custo mensal: R$ ${custoMensal.toFixed(2)} para ${qtd} pessoas durante ${dias} dias úteis.`;
     }
 }
+
+function atualizarDataHora(){
+    const agora = new Date();
+
+    const data = agora.toLocaleDateString('pt-BR');
+    const hora = agora.toLocaleTimeString('pt-BR');
+
+    const dataHoraEl = document.getElementById('dataHora');
+
+    dataHoraEl.textContent = `Data: ${data} | Hora: ${hora}`;
+}
+
+// atualiza a cada segundo
+setInterval(atualizarDataHora, 1000);
+
+// executa imediatamente ao carregar
+atualizarDataHora();
